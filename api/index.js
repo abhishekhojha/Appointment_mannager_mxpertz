@@ -13,7 +13,7 @@ const app = express();
 app.use(
   cors({
     origin: "https://appointment-mannager-mxpertz-hvve.vercel.app", // frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
