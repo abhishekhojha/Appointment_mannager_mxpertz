@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { BASE_URL } from "@/config.json";
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,7 +14,7 @@ const Users = () => {
           throw new Error("No token found, please login.");
         }
 
-        const response = await fetch("http://localhost:5000/api/users", {
+        const response = await fetch(`${BASE_URL}/api/users`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
